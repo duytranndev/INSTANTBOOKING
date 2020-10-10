@@ -111,7 +111,7 @@
 								<li><a href="#">promotion</a></li>
 								<li><a href="https://www.facebook.com/ngocduy.tran.982845/">pages</a></li>
 								<li><a href="#">blog</a></li>
-								<li><a href="contact.html">contact</a></li>
+								<li><a href="Contact.aspx">contact</a></li>
 							</ul>
 							<ul class="navbar_user">
 								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
