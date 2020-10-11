@@ -2,45 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-<title>
-	<asp:ContentPlaceHolder ID="head" runat="server">	
-	</asp:ContentPlaceHolder>
-</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Instant Booking Template">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
-	<link rel="stylesheet" type="text/css" href="../styles/responsive.css">
-    <style type="text/css">
-        .auto-style1 {
-            position: relative;
-            width: 100%;
-            min-height: 1px;
-            -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-            max-width: 50%;
-            left: 0px;
-            top: 0px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    </style>
-</head>
+<asp:ContentPlaceHolder ID="head" runat="server">	
 
+</asp:ContentPlaceHolder>
 <body>
-
-<div class="super_container">
+	<div class="super_container">
 
 	<!--Start of Tawk.to Script-->
-<script type="text/javascript">
+	<script type="text/javascript">
 	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 	(function(){
 	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -50,7 +19,7 @@
 	s1.setAttribute('crossorigin','*');
 	s0.parentNode.insertBefore(s1,s0);
 	})();
-</script>
+	</script>
 	<!--End of Tawk.to Script-->
 
 	<!-- Header -->
@@ -119,11 +88,11 @@
 				<div class="row">
 					<div class="col-lg-12 text-right">
 						<div class="logo_container">
-							<a href="#">Instant<span>Booking</span></a>
+							<a href="Home.aspx">Instant<span>Booking</span></a>
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">
-								<li><a href="#">home</a></li>
+								<li><a href="Home.aspx">home</a></li>
 								<li><a href="#">shop</a></li>
 								<li><a href="#">promotion</a></li>
 								<li><a href="https://www.facebook.com/ngocduy.tran.982845/">pages</a></li>
@@ -219,13 +188,11 @@
 	
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script>
+<asp:ContentPlaceHolder ID="footer" runat="server">
+
+</asp:ContentPlaceHolder>
+
+
 </body>
 
 </html>
