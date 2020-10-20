@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\INSTANTBOOKING.mdf" />
+    <Content Include="App_Data\INSTANTBOOKING_log.ldf">
+      <DependentUpon>INSTANTBOOKING.mdf</DependentUpon>
+    </Content>
     <Content Include="Booking.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Default.aspx" />
@@ -135,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="App_Data\" />
     <Folder Include="images\" />
     <Folder Include="js\" />
     <Folder Include="Models\" />
