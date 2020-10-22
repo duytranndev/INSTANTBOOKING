@@ -67,19 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\INSTANTBOOKING.mdf" />
-    <Content Include="App_Data\INSTANTBOOKING_log.ldf">
-      <DependentUpon>INSTANTBOOKING.mdf</DependentUpon>
+    <Content Include="App_Data\InstantBooking.mdf" />
+    <Content Include="App_Data\InstantBooking_log.ldf">
+      <DependentUpon>InstantBooking.mdf</DependentUpon>
     </Content>
     <Content Include="Booking.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="images\hinh1.jpg" />
+    <Content Include="images\hinh2.jpg" />
     <Content Include="Single.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\FileXuLy.cs" />
     <Compile Include="Booking.aspx.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,8 +141,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
-    <Folder Include="images\" />
     <Folder Include="js\" />
     <Folder Include="Models\" />
     <Folder Include="plugins\" />

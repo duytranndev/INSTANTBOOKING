@@ -97,166 +97,29 @@
 
 							<!-- room 1 -->
 
-							<div class="room-item hotel-motel">
-								<div class="room discount room_filter">
-									<div class="room_image">
-										<img src="images/room_1.png" alt="">
+							<asp:DataList ID="DataList1" runat="server">
+								<ItemTemplate>
+									
+									<div class="room-item hotel-motel">
+										<div class="room discount room_filter">
+											<div class="room_image">
+												<asp:Image ID="Image2" runat="server" ImageUrl='<%# "~/images/" +Eval("HinhAnh") %>' />
+											</div>
+											<div class="favorite favorite_left"></div>
+											<div class="room_bubble room_bubble_right room_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
+											<div class="room_info">
+												<h5 class="room_name">
+													<asp:HyperLink ID="HyperLink1" NavigateUrl="~/Booking.aspx" runat="server"><asp:Label ID="Label2" runat="server" Text='<%# Eval("SoPhong") %>'></asp:Label></asp:HyperLink>
+												<div class="room_price">$520.00<span>$590.00</span></div>
+											</div>
+										</div>
+										<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
 									</div>
-									<div class="favorite favorite_left"></div>
-									<div class="room_bubble room_bubble_right room_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h5>
-										<div class="room_price">$520.00<span>$590.00</span></div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
+								</ItemTemplate>
+							</asp:DataList>
 
-							<!-- room 2 -->
-							<div class="room-item resort">
-								<div class="room room_filter">
-									<div class="room_image">
-										<img src="images/room_3.png" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">Blue Yeti USB Microphone Blackout Edition</a></h5>
-										<div class="room_price">$120.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
-
-						<!-- room 3 -->
-
-							<div class="room-item resort">
-								<div class="room room_filter">
-									<div class="room_image">
-										<img src="images/room_3.png" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">Blue Yeti USB Microphone Blackout Edition</a></h5>
-										<div class="room_price">$120.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
-
-							<!-- room 4 -->
-
-							<div class="room-item homstay">
-								<div class="room room_filter">
-									<div class="room_image">
-										<img src="images/room_4.png" alt="">
-									</div>
-									<div class="room_bubble room_bubble_right room_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
-									<div class="favorite favorite_left"></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h5>
-										<div class="room_price">$410.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
-
-							<!-- room 5 -->
-
-							<div class="room-item resort hotel-motel">
-								<div class="room room_filter">
-									<div class="room_image">
-										<img src="images/room_5.png" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">Pryma Headphones, Rose Gold & Grey</a></h5>
-										<div class="room_price">$180.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
-
-							<!-- room 6 -->
-
-							<div class="room-item homstay">
-								<div class="room discount room_filter">
-									<div class="room_image">
-										<img src="images/room_6.png" alt="">
-									</div>
-									<div class="favorite favorite_left"></div>
-									<div class="room_bubble room_bubble_right room_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="#Single.aspx">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h5>
-										<div class="room_price">$520.00<span>$590.00</span></div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
-
-							<!-- room 7 -->
-
-							<div class="room-item resort">
-								<div class="room room_filter">
-									<div class="room_image">
-										<img src="images/room_7.png" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h5>
-										<div class="room_price">$610.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
-
-							<!-- room 8 -->
-
-							<div class="room-item homstay">
-								<div class="room room_filter">
-									<div class="room_image">
-										<img src="images/room_8.png" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">Blue Yeti USB Microphone Blackout Edition</a></h5>
-										<div class="room_price">$120.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
-
-							<!-- room 9 -->
-
-							<div class="room-item hotel-motel">
-								<div class="room room_filter">
-									<div class="room_image">
-										<img src="images/room_9.png" alt="">
-									</div>
-									<div class="room_bubble room_bubble_right room_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
-									<div class="favorite favorite_left"></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h5>
-										<div class="room_price">$410.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
-
-							<!-- room 10 -->
-
-							<div class="room-item hotel-motel">
-								<div class="room room_filter">
-									<div class="room_image">
-										<img src="images/room_10.png" alt="">
-									</div>
-									<div class="favorite"></div>
-									<div class="room_info">
-										<h5 class="room_name"><a href="Single.aspx">Pryma Headphones, Rose Gold & Grey</a></h5>
-										<div class="room_price">$180.00</div>
-									</div>
-								</div>
-								<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-							</div>
+							
+							
 						</div>
 					</div>
 				</div>
