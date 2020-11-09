@@ -103,17 +103,19 @@
 									<div class="room-item hotel-motel">
 										<div class="room discount room_filter">
 											<div class="room_image">
-												<asp:Image ID="Image2" runat="server" ImageUrl='<%# "~/images/" +Eval("HinhAnh") %>' />
+												 <a href="single.aspx?id=<%#Eval("MA_PHONG")%>">
+													 <asp:Image ID="Image2" runat="server" ImageUrl='<%# "~/images/" +Eval("HINH_LON") %>' />
+												 </a>
 											</div>
 											<div class="favorite favorite_left"></div>
 											<div class="room_bubble room_bubble_right room_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
 											<div class="room_info">
 												<h5 class="room_name">
-													<asp:HyperLink ID="HyperLink1" NavigateUrl="~/Booking.aspx" runat="server"><asp:Label ID="Label2" runat="server" Text='<%# Eval("SoPhong") %>'></asp:Label></asp:HyperLink>
+													<a href="single.aspx?id=<%#Eval("MA_PHONG")%>"><asp:Label ID="Label2" runat="server" Text='<%# Eval("SO_PHONG") %>'></asp:Label></a>
 												<div class="room_price">$520.00<span>$590.00</span></div>
 											</div>
 										</div>
-										<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+										<div class="red_button add_to_cart_button"><a href="#">Book Now</a></div>
 									</div>
 								</ItemTemplate>
 							</asp:DataList>

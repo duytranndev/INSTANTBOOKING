@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="Booking.aspx.cs" Inherits="INSTANTBOOKING.Booking" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-	<head>
+    <head>
 	<title>Colo Shop Categories</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,11 +14,23 @@
 	<link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="styles/categories_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/categories_responsive.css">
+	<style>
+		.btn-search{
+		height: 35px;
+		margin: 5px 0px;
+		background-color: red;
+		text-align: center;
+		padding: 6px;
+		font-size: 16px;
+		border-radius: 50px;
+		color: white;
+	}
+	</style>
 </head>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<div class="container room_section_container">
+    <div class="container room_section_container">
 		<div class="row">
 			<div class="col room_section clearfix">
 
@@ -26,7 +38,7 @@
 
 				<div class="breadcrumbs d-flex flex-row align-items-center">
 					<ul>
-						<li><a href="Home.aspx">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li class="active"><a href="booking.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Room</a></li>
 					</ul>
 				</div>
@@ -34,29 +46,36 @@
 				<!-- Sidebar -->
 
 				<div class="sidebar">
-					<div class="sidebar_section">
-						<div class="sidebar_title">
-							<h5>Room Category</h5>
+					
+
+					<form id="form1" runat="server">
+						<div class="sidebar_section search">							<ul class="sidebar_categories">
+								<asp:TextBox Cssclass="form-control" type="text" placeholder="Tìm Kiếm" aria-label="Search" ID="txt_timkiem" runat="server"></asp:TextBox>
+								<asp:Button CssClass="btn-search" ID="btn_timkiem" runat="server" Text="Tìm Kiếm" OnClick="btn_timkiem_Click"/>
+							</ul>
 						</div>
-						<ul class="sidebar_categories">
-							<li><a href="#">Hotel/ Motel</a></li>
-							<li class="active"><a href="#"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>Homstay</a></li>
-							<li><a href="#">Resort</a></li>
-							
-						</ul>
-					</div>
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                            <AlternatingRowStyle BackColor="White" />
+                            <Columns>
+                                <asp:BoundField DataField="MA_PHONG" HeaderText="Mã Phòng" HtmlEncode="False" />
+                                <asp:BoundField DataField="SO_PHONG" HeaderText="Tên Phòng" HtmlEncode="False" />
+                                <asp:CommandField ShowSelectButton="True" />
+                            </Columns>
+                            <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                            <SortedAscendingCellStyle BackColor="#FDF5AC" />
+                            <SortedAscendingHeaderStyle BackColor="#4D0000" />
+                            <SortedDescendingCellStyle BackColor="#FCF6C0" />
+                            <SortedDescendingHeaderStyle BackColor="#820000" />
+
+                        </asp:GridView>
+					</form>
 
 					<!-- Price Range Filtering -->
-					<div class="sidebar_section">
-						<div class="sidebar_title">
-							<h5>Filter by Price</h5>
-						</div>
-						<p>
-							<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-						</p>
-						<div id="slider-range"></div>
-						<div class="filter_button"><span>filter</span></div>
-					</div>
+					
 
 					<!-- Phổ biến -->
 					<div class="sidebar_section">
@@ -148,16 +167,7 @@
 													<li class="type_sorting_btn" data-isotope-option='{ "sortBy": "name" }'><span>Room Name</span></li>
 												</ul>
 											</li>
-											<li>
-												<span>Show</span>
-												<span class="num_sorting_text">6</span>
-												<i class="fa fa-angle-down"></i>
-												<ul class="sorting_num">
-													<li class="num_sorting_btn"><span>6</span></li>
-													<li class="num_sorting_btn"><span>12</span></li>
-													<li class="num_sorting_btn"><span>24</span></li>
-												</ul>
-											</li>
+											
 										</ul>
 										
 									</div>
@@ -168,20 +178,25 @@
 	
 										<!-- room 1 -->
 	
-										<div class="room-item men">
-											<div class="room discount room_filter">
-												<div class="room_image">
-													<img src="images/product_4.png" alt="">
-												</div>
-												<div class="favorite favorite_left"></div>
-												<div class="room_bubble room_bubble_right room_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
-												<div class="room_info">
-													<h6 class="room_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
-													<div class="room_price">$520.00<span>$590.00</span></div>
-												</div>
-											</div>
-											<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-										</div>
+										<%--<asp:DataList ID="DataList2" runat="server">
+												<ItemTemplate>
+													<div class="room-item women">
+																<div class="room room_filter">
+																	<div class="room_image">
+											                            <asp:Image ID="Image2" runat="server" ImageUrl='<%# "~/images/"+Eval("HINH_LON") %>' />
+																	</div>
+																	<div class="favorite"></div>
+																	<div class="room_bubble room_bubble_left room_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
+																	<div class="room_info">
+																		<h6 class="room_name">
+                                                                            <asp:HyperLink ID="HyperLink1" runat="server" Text='<%# Eval("SO_PHONG") %>'></asp:HyperLink></h6>
+											                            <asp:Label Cssclass="room_price" ID="Label1" runat="server" Text='<%# Eval("DON_GIA") %>'></asp:Label>
+																	</div>
+																</div>
+																<div class="red_button add_to_cart_button"><a href="#">Book now</a></div>
+															</div>
+												</ItemTemplate>	
+											</asp:DataList>--%>
 	
 										<!-- room 2 -->
 	
@@ -400,26 +415,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row toolbar">
-							<div class="col-md-4 toolbar_info">
-								<div class="btn btn-outline-secondary btn-block">Giá (ưu tiên thấp nhất)</div>
-							</div>
-							<div class="col-md-4">
-								<div class="dropdown">
-									<button type="button" class="btn btn-outline-secondary btn-block dropdown-toggle" data-toggle="dropdown">
-									  Sao
-									</button>
-									<div class="dropdown-menu">
-									  <a class="dropdown-item" href="#">Link 1</a>
-									  <a class="dropdown-item" href="#">Link 2</a>
-									  <a class="dropdown-item" href="#">Link 3</a>
-									</div>
-								  </div>
-							</div>
-							<div class="col-md-4">
-								<div class="btn btn-outline-secondary btn-block">Xếp hạng sao và đánh giá</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -470,12 +466,11 @@
 			</div>
 		</div>
 	</div>
-
 </asp:Content>
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
-	<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
 	<script src="styles/bootstrap4/popper.js"></script>
 	<script src="styles/bootstrap4/bootstrap.min.js"></script>
 	<script src="plugins/Isotope/isotope.pkgd.min.js"></script>

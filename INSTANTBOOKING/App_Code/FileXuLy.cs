@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Web.Services.Description;
 
 namespace INSTANTBOOKING.App_Code
 {
@@ -52,6 +52,25 @@ namespace INSTANTBOOKING.App_Code
 			command.CommandType = CommandType.StoredProcedure;
 			return command.ExecuteNonQuery();
 
+		}
+		public bool check_key(string sql, string key)
+		{
+			bool ok = false;
+			try
+			{
+				SqlConnection con = KetNoi();
+				SqlCommand command = new SqlCommand(sql, con);
+				SqlDataReader data = command.ExecuteReader();
+				if (data.Read() && data.GetString(0).ToUpper() == key.ToUpper())
+					ok = true;
+				con.Close();
+			}
+			catch (SqlException err)
+			{
+				err.Message.ToString();
+			}
+
+			return ok;
 		}
 	}
 }
