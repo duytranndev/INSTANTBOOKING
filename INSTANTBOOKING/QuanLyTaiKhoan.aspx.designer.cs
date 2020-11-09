@@ -11,7 +11,7 @@ namespace INSTANTBOOKING
 {
 
 
-    public partial class Booking
+    public partial class QuanLyTaiKhoan
     {
 
         /// <summary>
@@ -24,30 +24,57 @@ namespace INSTANTBOOKING
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txt_timkiem control.
+        /// txt_tenTK control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_timkiem;
+        protected global::System.Web.UI.WebControls.Label txt_tenTK;
 
         /// <summary>
-        /// btn_timkiem control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_timkiem;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// GridView1 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
+        /// txt_quyen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_quyen;
+
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// btn_luu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_luu;
     }
 }

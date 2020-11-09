@@ -11,7 +11,7 @@ namespace INSTANTBOOKING
 {
 
 
-    public partial class Booking
+    public partial class DangNhap
     {
 
         /// <summary>
@@ -24,30 +24,48 @@ namespace INSTANTBOOKING
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txt_timkiem control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_timkiem;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// btn_timkiem control.
+        /// txt_tentk control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_timkiem;
+        protected global::System.Web.UI.WebControls.TextBox txt_tentk;
 
         /// <summary>
-        /// GridView1 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
+        /// txt_matkhau control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_matkhau;
+
+        /// <summary>
+        /// btn_dangnhap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_dangnhap;
     }
 }
